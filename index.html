@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/js" src="js/MainController.js"></script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/js" src="js/angular.min.js"></script>
+  <script type="text/js" src="js/angular.js"></script>
+  <script type="text/js" src="js/bootstrap.min.js"></script>
+  <script type="text/js" src="js/MainController.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<!--Nav bar starts here-->
+ <nav class="navbar navbar-inverse navbar-fixed-top" style = "margin-bottom: 0px;color=#283593;background-color: #123C7D;
+    border-color: #080808;;width:100%;">
+  <div class="container-fluid">
+    <div class="navbar-header ">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <div class="navbar-brand">
+      <span class="glyphicon glyphicon-education"></span> Asset Management</a>
+    </div></div>
+    <div class="collapse navbar-collapse" id="myNav">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#img_container"> <span class="glyphicon glyphicon-home"></span> Home</a></li>
+      <li><a href="#hiw"> <span class="glyphicon glyphicon-wrench"></span> How it works</a></li>
+      <li><a href="#features"> <span class="glyphicon glyphicon-tasks"></span> Features</a></li> 
+      <li><a href="#aboutus"> <span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
+      <li><a href="#contactus"> <span class="glyphicon glyphicon-phone"></span> Contact Us</a></li> 
+      <!--<li class="active"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign in</a></li>-->
+    </ul>
+    </div>
+  </div>
+</nav>
+<!--Nav bar ends here-->
+
+<!--Background image-->
+<div class="jumbotron container-fluid" id="img_container">
+   <!-- <div class="col-sm-8" style="background-image:url('img/AssetManagement.jpg');width:100%;background-size:cover;height: 700px;
+    background-repeat: no-repeat;"></div>-->
+    <center><a id="signb" href="#" class="btn btn-primary btn-lg signb" role="button" data-toggle="modal" data-target="#myModal" style="position:absolute;top:460px;background:white;color:#123C7D;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 14px;"><span class="glyphicon glyphicon-log-in"></span> <font ><b> Sign In<b></font></a></center>
+    
+</div>
+
+<!--Login Modal Starts here-->
+ <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password" required>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove" id="closer"></span> Cancel</button>
+          <p><a id="afp" href="#" data-toggle="modal" data-target="#myfp" onclick="tglmain()">Forgot Password?</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+ 
+<script>
+function tglmain(){
+document.getElementById("closer").click();
+}
+$(document).ready(function(){
+    $("#signnb").click(function(){
+        $("#myModal").modal();
+    });
+   $("#afp").click(function(){
+        $("#myfp").modal();
+    });
+     
+});
+</script>
+<!--Login Modal Ends Here-->
+
+
+<!--Forgot Password starts here-->
+<div class="modal fade" id="myfp" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <h4><span class="glyphicon glyphicon-lock"></span> Forgot Password</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="email"><span class="glyphicon glyphicon-user"></span> Emai-id</label>
+              <input type="text" class="form-control" id="email" placeholder="Enter email">
+            </div>
+              <button type="submit" title="Forgot Password" class="btn btn-success btn-block" onclick="myFunction()"><span class="glyphicon glyphicon-off"></span> Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+
+<script>
+function myFunction() {
+    alert("Your Password have been mailed to you.");
+}
+$(document).ready(function(){
+    $("#afp").click(function(){
+        $("#myfp").modal();
+    });
+});  
+</script>
+<!--Forgot Password ends here-->
+
+<br><br><br>
+<div ng-controller="MainController">
+ <div class="container">
+
+<!--How it works-->
+<div id="hiw" style="background-color:white;color:#123C7D;text-align: center;">
+  <div class=row>
+  <div class="col-md-6"><img class="img-responsive" style="height:400px;width:100%;" ng-src="img/{{hiw.image}}" alt="Description" /></div>
+  <div class="col-md-6" style="padding-top: 100px;padding-bottom: 100px;">{{hiw.text}}</div>
+  </div>
+</div>
+
+<br><br><br>
+
+<!--Features-->
+<div id="features" style="background-color:#123C7D;color:white;">
+  <div class=row>
+  <div class="col-md-6" style="padding-top: 100px;padding-bottom: 100px;">{{features.text}}</div>
+  <div class="col-md-6"><img class="img-responsive" style="height:350px;width:100%;" ng-src="img/{{features.image}}" alt="Description" /></div>
+</div>
+</div>
+
+<br><br><br>
+
+<!--About Us-->
+<div id="aboutus" style="background-color:white;color:#123C7D;text-align:center;">
+  <div class=row>
+  <div class="col-md-6"><img class="img-responsive" style="height:400px;width:330px;align:center;margin: 0 auto;" ng-src="img/{{aboutus.image1}}" alt="Description" /></div>
+  <div class="col-md-6"><img class="img-responsive" style="height:400px;width:300px;margin: 0 auto;"ng-src="img/{{aboutus.image2}}" alt="Description" /></div>
+</div>
+<div class=row>
+  <div class="col-md-6">{{aboutus.text1}}</div>
+  <div class="col-md-6">{{aboutus.text3}}</div>
+</div>
+<div class=row>
+  <div class="col-md-6">{{aboutus.text2}}</div>
+  <div class="col-md-6">{{aboutus.text4}}</div>
+</div>
+</div>
+
+<br><br><br>
+
+<!--Contact Us-->
+<div id="contactus" style="background-color:#123C7D;color:white;">
+  <div class=row>
+  <div class="col-md-6"><img class="img-responsive" ng-src="img/{{contactus.image}}" alt="Description"/></div>
+  <div class="col-md-6" style="text-align:center;">
+                        <!--<div class="col-md-12" style="padding-top: 50px;padding-bottom: 50px;"></div>-->
+                        <div class="col-md-12" style="padding-top: 100px;padding-bottom: 100px;">{{contactus.textm}}<br>{{contactus.textp}}<br>{{contactus.textf}}</div>
+                        <!--<div class="col-md-12"></div>-->
+</div>
+</div>
+</div>
+<br><br><br>
+
+<div id="footer" style="background-color:white;color:#123C7D;text-align:center;">
+   <div class=row>
+    <div class="col-md-12">{{footer.text}}</div>
+   </div>
+</div>
+
+</div>
+</div>
+<script src="js/MainController.js"></script>
+<br><br>
+
+</body>
+</html>

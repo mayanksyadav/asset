@@ -1,0 +1,22 @@
+element.style{
+  display: flex;
+}
+
+body{
+ /*padding-top: 70px;*/
+}
+
+
+/*.signb:hover{
+  background-color:#555 !important;
+}*/
+
+.jumbotron {
+    background-image:url('../img/AssetManagement.jpg');
+    width:100%;
+    background-size:cover;
+    height: 600px;
+    background-repeat: no-repeat;
+}
+
+
