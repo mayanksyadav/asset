@@ -145,7 +145,7 @@ $(document).ready(function(){
 </script>
 <!--Forgot Password ends here-->
 
-<br><br><br>
+
 <div ng-controller="MainController">
  <div class="container">
 
@@ -157,40 +157,47 @@ $(document).ready(function(){
   </div>
 </div>
 
-<br><br><br>
+<br>
 
 <!--Features-->
-<div id="features" style="background-color:#123C7D;color:white;">
-  <div class=row>
+<div id="features" style="padding-top: 50px;padding-bottom: 50px;background-color:#123C7D;color:white;text-align: center;">
+  <div class=row style="">
   <div class="col-md-6" style="padding-top: 100px;padding-bottom: 100px;">{{features.text}}</div>
-  <div class="col-md-6"><img class="img-responsive" style="height:350px;width:100%;" ng-src="img/{{features.image}}" alt="Description" /></div>
+  <div class="col-md-6"><img class="img-responsive" style="height:350px;width:95%;" ng-src="img/{{features.image}}" alt="Description" /></div>
 </div>
 </div>
 
-<br><br><br>
+
 
 <!--About Us-->
-<div id="aboutus" style="background-color:white;color:#123C7D;text-align:center;">
+<div id="aboutus" style="padding-top: 50px;padding-bottom: 50px;background-color:white;color:#123C7D;text-align:center;">
   <div class=row>
-  <div class="col-md-6"><img class="img-responsive" style="height:400px;width:330px;align:center;margin: 0 auto;" ng-src="img/{{aboutus.image1}}" alt="Description" /></div>
-  <div class="col-md-6"><img class="img-responsive" style="height:400px;width:300px;margin: 0 auto;"ng-src="img/{{aboutus.image2}}" alt="Description" /></div>
+  <div class="col-md-6">
+     <div><img class="img-responsive" style="height:300px;width:230px;align:center;margin: 0 auto;" ng-src="img/{{aboutus.image1}}" alt="Description" /></div>
+     <div>{{aboutus.text1}}</div>
+     <div>{{aboutus.text2}}</div>
+  </div>
+  <div class="col-md-6">
+     <div><img class="img-responsive" style="height:300px;width:210px;margin: 0 auto;"ng-src="img/{{aboutus.image2}}" alt="Description" /></div>
+     <div>{{aboutus.text3}}</div>
+     <div>{{aboutus.text4}}</div>
+  </div>
 </div>
-<div class=row>
+<!--<div class=row>
   <div class="col-md-6">{{aboutus.text1}}</div>
   <div class="col-md-6">{{aboutus.text3}}</div>
 </div>
 <div class=row>
   <div class="col-md-6">{{aboutus.text2}}</div>
   <div class="col-md-6">{{aboutus.text4}}</div>
-</div>
+</div>-->
 </div>
 
-<br><br><br>
 
 <!--Contact Us-->
-<div id="contactus" style="background-color:#123C7D;color:white;">
+<div id="contactus" style="padding-top: 50px;padding-bottom: 50px;background-color:#123C7D;color:white;">
   <div class=row>
-  <div class="col-md-6"><img class="img-responsive" ng-src="img/{{contactus.image}}" alt="Description"/></div>
+  <div class="col-md-6"><img class="img-responsive" style="padding-left: 20px;" ng-src="img/{{contactus.image}}" alt="Description"/></div>
   <div class="col-md-6" style="text-align:center;">
                         <!--<div class="col-md-12" style="padding-top: 50px;padding-bottom: 50px;"></div>-->
                         <div class="col-md-12" style="padding-top: 100px;padding-bottom: 100px;">{{contactus.textm}}<br>{{contactus.textp}}<br>{{contactus.textf}}</div>
@@ -198,7 +205,7 @@ $(document).ready(function(){
 </div>
 </div>
 </div>
-<br><br><br>
+<br><br>
 
 <div id="footer" style="background-color:white;color:#123C7D;text-align:center;">
    <div class=row>
